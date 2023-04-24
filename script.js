@@ -1,54 +1,54 @@
-const add = document.querySelector(".button");
-const remove = document.querySelector(".close");
-const books = JSON.parse(localStorage.getItem("new-list")) || [
+const add = document.querySelector('.button');
+const remove = document.querySelector('.close');
+const books = JSON.parse(localStorage.getItem('new-list')) || [
   {
-    title: "Faust",
-    author: "Goethe",
+    title: 'Faust',
+    author: 'Goethe',
   },
   {
-    title: "For Whom the Bell Tolls",
-    author: "Ernest Hemingway",
+    title: 'For Whom the Bell Tolls',
+    author: 'Ernest Hemingway',
   },
   {
-    title: "Old Man and the Sea",
-    author: "Ernest Hemingway",
+    title: 'Old Man and the Sea',
+    author: 'Ernest Hemingway',
   },
   {
-    title: "Freedom at Midnight",
-    author: "Collins",
+    title: 'Freedom at Midnight',
+    author: 'Collins',
   },
   {
-    title: "Jungle Book",
-    author: "Ruskin Bond",
+    title: 'Jungle Book',
+    author: 'Ruskin Bond',
   },
   {
-    title: "Illiad",
-    author: "Homer",
+    title: 'Illiad',
+    author: 'Homer',
   },
-]
+];
 
 // When some1 hits add
 
 function addFunction(e) {
   e.preventDefault();
-  let title = document.querySelector(".title");
-  let author = document.querySelector(".author");
-  let list = document.querySelector("#list");
+  const title = document.querySelector('.title');
+  const author = document.querySelector('.author');
+  const list = document.querySelector('#list');
 
-  const new_book = {
+  const newbook = {
     title: title.value,
     author: author.value,
   };
 
-  books.push(new_book);
-  //////////// display all books
-  //// first reset list
+  books.push(newbook);
+  /// ///////// display all books
+  /// / first reset list
   // put it to locall server
 
-  localStorage.setItem("new-list", JSON.stringify(books));
-  list.innerHTML = "";
+  localStorage.setItem('new-list', JSON.stringify(books));
+  list.innerHTML = '';
 
-  //then loop through books array and add + everything
+  // then loop through books array and add + everything
   books.forEach((book, index) => {
     list.innerHTML += ` 
   <div id="boi${index}" data-index=${index}>
@@ -61,10 +61,10 @@ function addFunction(e) {
  `;
   });
 }
-add.addEventListener("click", addFunction);
+add.addEventListener('click', addFunction);
 function removeFunction(button) {
-  let num = button.id
-  let rmv = document.getElementById('boi'+num)
-  rmv.remove()
-  localStorage.removeItem("new-list", JSON.stringify(books));
+  const num = button.id;
+  const rmv = document.getElementById(`boi${num}`);
+  rmv.remove();
+  localStorage.removeItem('new-list', JSON.stringify(books));
 }
