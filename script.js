@@ -1,3 +1,4 @@
+
 const list = document.querySelector('#list');
 const add = document.querySelector('.button');
 const remove = document.querySelector('.close');
@@ -19,52 +20,59 @@ let books = JSON.parse(localStorage.getItem('new-list')) || [
   },
 ];
 
-function renderBooks() {
-  localStorage.setItem('new-list', JSON.stringify(books));
-  list.innerHTML = '';
-  books.forEach((book, index) => {
-    list.innerHTML += ` 
-  <div id="boi${index}" data-index=${index}>
-  <p> ${book.title} <br /> ${book.author} </p>
-  <p>
-    <button class="close" id=${index} onclick='removeFunction(this)'>Remove</button>
-  </p>
-  <hr />
-  </div>
- `;
-  });
-}
-
-function addFunction(e) {
-  e.preventDefault();
-  const title = document.querySelector('.title');
-  const author = document.querySelector('.author');
-  if (title.value.trim() === '' || author.value.trim() === '') {
-    return;
+class NewBook {
+  constructor(title, author){
+    this.title = title;
+    this.author = author;
+    this.id = books.length;
   }
-  const newbook = {
-    title: title.value,
-    author: author.value,
-    id: books.length,
-  };
-  books = books.concat(newbook);
-  document.querySelector('form').reset();
-  renderBooks();
+
+
+ static renderBooks() {
+    localStorage.setItem('new-list', JSON.stringify(books));
+    list.innerHTML = '';
+    books.forEach((book, index) => {
+      list.innerHTML += ` 
+    <div id="boi${index}" data-index=${index}>
+    <p> ${book.title} <br /> ${book.author} </p>
+    <p>
+      <button class="close" id=${index} onclick='NewBook.removeFunction(this)'>Remove</button>
+    </p>
+    <hr />
+    </div>
+   `;
+    });
+  }
+  
+  static addFunction(e) {
+    e.preventDefault();
+    const title = document.querySelector('.title').value.trim();
+    const author = document.querySelector('.author').value.trim();
+    if (title === '' || author === '') {
+      return;
+    }
+    const new_book = new NewBook(title, author);
+    books = books.concat(new_book);
+    document.querySelector('form').reset();
+    document.querySelector('.title').focus();
+    this.renderBooks();
+  }
+  
+  static updateIndex() {
+    books.forEach((book, index) => {
+      book.id = index;
+    });
+  }
+  
+  static removeFunction(button) {
+    const num = parseInt(button.id, 10);
+    books = books.filter((book) => book.id !== num);
+    this.updateIndex();
+    this.renderBooks();
+  }
+  
 }
 
-function updateIndex() {
-  books.forEach((book, index) => {
-    book.id = index;
-  });
-}
+add.addEventListener('click', NewBook.addFunction);
 
-function removeFunction(button) {
-  const num = parseInt(button.id, 10);
-  books = books.filter((book) => book.id !== num);
-  updateIndex();
-  renderBooks();
-}
-
-add.addEventListener('click', addFunction);
-
-window.location.reload = renderBooks();
+window.location.reload = NewBook.renderBooks();
