@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 <a name="readme-top"></a>
 
 <div align="center">
@@ -151,6 +153,10 @@ You can deploy this project using: GitHub Pages,
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :telescope: Future Features <a name="future-features"></a>
+
+- **Headers and footers**
+- **Setup Navigations > Book lists, Add books & Contact information**
+- **Implement unit testing**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
