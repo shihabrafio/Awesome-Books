@@ -17,21 +17,7 @@ let books = JSON.parse(localStorage.getItem('new-list')) || [
     author: 'Ernest Hemingway',
     id: 2,
   },
-  // {
-  //   title: 'Freedom at Midnight',
-  //   author: 'Collins',
-  // },
-  // {
-  //   title: 'Jungle Book',
-  //   author: 'Ruskin Bond',
-  // },
-  // {
-  //   title: 'Illiad',
-  //   author: 'Homer',
-  // },
 ];
-
-// When some1 hits add
 
 function renderBooks() {
   localStorage.setItem('new-list', JSON.stringify(books));
@@ -61,7 +47,7 @@ function addFunction(e) {
     author: author.value,
     id: books.length,
   };
-  books.push(newbook);
+  books = books.concat(newbook);
   document.querySelector('form').reset();
   renderBooks();
 }
