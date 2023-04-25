@@ -146,9 +146,17 @@ You can deploy this project using: GitHub Pages,
 
 ## :bust_in_silhouette: Author <a name="author"></a>
 
+
+👤 *A.I.M. Shihab Uddin Khan*
 - GitHub: [@shihabrafio](https://github.com/shihabrafio)
 - Twitter: [@shihab_uddin19](https://twitter.com/shihab_uddin19)
 - LinkedIn: [Shihab Uddin Khan](https://www.linkedin.com/in/shihab-uddin-khan-45620a16a/)
+  
+
+👤 *Yordanos Temesgen*
+- GitHub: [@yordinia](https://github.com/yordinia)
+- Twitter: [@yordinia](https://twitter.com/yordinia)
+- LinkedIn: [Yordanos-Temesgen](https://linkedin.com/in/yordanos-temesgen-251b6a202/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
