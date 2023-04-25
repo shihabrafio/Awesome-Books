@@ -33,7 +33,7 @@ let books = JSON.parse(localStorage.getItem('new-list')) || [
 
 // When some1 hits add
 
-function renderBooks(){
+function renderBooks() {
   localStorage.setItem('new-list', JSON.stringify(books));
   list.innerHTML = '';
   books.forEach((book, index) => {
@@ -53,28 +53,28 @@ function addFunction(e) {
   e.preventDefault();
   const title = document.querySelector('.title');
   const author = document.querySelector('.author');
-  if(title.value.trim() === '' || author.value.trim() === ''){
+  if (title.value.trim() === '' || author.value.trim() === '') {
     return;
   }
   const newbook = {
     title: title.value,
     author: author.value,
-    id: books.length
+    id: books.length,
   };
   books.push(newbook);
   document.querySelector('form').reset();
   renderBooks();
 }
 
-function updateIndex(){
-  books.forEach((book, index)=>{ 
+function updateIndex() {
+  books.forEach((book, index) => {
     book.id = index;
-  })
+  });
 }
 
 function removeFunction(button) {
-  const num = parseInt(button.id); 
-  books = books.filter((book) => book.id !== num )
+  const num = parseInt(button.id, 10);
+  books = books.filter((book) => book.id !== num);
   updateIndex();
   renderBooks();
 }
