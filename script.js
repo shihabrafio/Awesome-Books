@@ -66,5 +66,6 @@ function removeFunction(button) {
   const num = button.id;
   const rmv = document.getElementById(`boi${num}`);
   rmv.remove();
-  localStorage.removeItem('new-list', JSON.stringify(books));
+  books.splice(num);
+  localStorage.setItem('new-list', JSON.stringify(books));
 }
