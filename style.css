@@ -1,7 +1,49 @@
 * {
-  margin: 0;
+  margin-top: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+header h1 {
+  margin-top: 4%;
+}
+
+hr {
+  width: 23%;
+  border-top: 3px solid black;
+}
+
+.title,.author {
+  text-align: left;
+  width: 28%;
+  background: white;
+  border-radius: 4px;
+}
+
+.button {
+  text-align: right;
+}
+
+#list {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 40%;
+  margin-left: 30%;
+}
+
+td {
+  text-align: left;
+  background: gainsboro;
+}
+
+.close {
+  box-shadow: 1px 2px;
+  background-color: white;
 }

@@ -38,7 +38,7 @@ class NewBook {
     books.forEach((book, index) => {
       list.innerHTML += ` 
     <tr id="boi${index}" data-index=${index}>
-    <td> ${book.title} <br /> ${book.author} </td>
+    <td> ${book.title} by ${book.author} </td>
     <td>
       <button class="close" id=${index} onclick='NewBook.removeFunction(this)'>Remove</button>
     </td>
