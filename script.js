@@ -3,10 +3,6 @@ const read = document.getElementById('read');
 const contact = document.getElementById('contact');
 const booklist = document.getElementById('book-list');
 
-addNew.classList.add('active');
-contact.classList.add('active');
-booklist.classList.add('active');
-
 const list = document.querySelector('#list');
 const add = document.querySelector('.button');
 const remove = document.querySelector('.close');
@@ -37,7 +33,6 @@ class NewBook {
 
 
  static renderBooks() {
-    const books = document.getElementById('books');
     localStorage.setItem('new-list', JSON.stringify(books));
     list.innerHTML = '';
     books.forEach((book, index) => {
@@ -61,10 +56,12 @@ class NewBook {
       return;
     }
     const newbook = new NewBook(title, author);
-    books = books.concat(newbook)
+
+    books = books.concat(newbook);
+
     document.querySelector('form').reset();
     document.querySelector('.title').focus();
-    this.renderBooks();
+    NewBook.renderBooks();
   }
   
   static updateIndex() {
