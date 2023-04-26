@@ -39,8 +39,8 @@ hr {
 #list {
   box-sizing: border-box;
   border: 3px solid black;
-  width: 40%;
-  margin-left: 30%;
+  width: 35%;
+  margin-left: 33%;
 }
 
 td {
@@ -55,4 +55,5 @@ tbody:nth-of-type(odd) {
   box-shadow: 1px 2px;
   background-color: white;
   padding: 3%;
+  margin-left: 15%;
 }
