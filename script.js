@@ -94,6 +94,7 @@ class NewBook {
     books = books.concat(newbook)
     document.querySelector('form').reset();
     document.querySelector('.title').focus();
+    console.log('add - newbook -', newbook, 'list', books)
     NewBook.renderBooks();
   }
   
