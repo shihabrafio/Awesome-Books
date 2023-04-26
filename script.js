@@ -25,7 +25,7 @@ navitem.forEach((item) => {
       addNew.classList.add('active');
       read.classList.add('active');
       go.classList.remove('active');
-      book-ist.classList.remove('active');
+      booklist.classList.remove('active');
       then.classList.add('active');
     } else {
       read.classList.remove('active');
@@ -59,14 +59,13 @@ let books = JSON.parse(localStorage.getItem('new-list')) || [
 ];
 
 class NewBook {
-  constructor(title, author){
+  constructor(title, author) {
     this.title = title;
     this.author = author;
     this.id = books.length;
   }
 
-
- static renderBooks() {
+  static renderBooks() {
     localStorage.setItem('new-list', JSON.stringify(books));
     list.innerHTML = '';
     books.forEach((book, index) => {
@@ -80,7 +79,7 @@ class NewBook {
    `;
     });
   }
-  
+
   static addFunction(e) {
     e.preventDefault();
     const title = document.querySelector('.title').value.trim();
@@ -89,25 +88,24 @@ class NewBook {
       return;
     }
     const newbook = new NewBook(title, author);
-    books = books.concat(newbook)
+    books = books.concat(newbook);
     document.querySelector('form').reset();
     document.querySelector('.title').focus();
     NewBook.renderBooks();
   }
-  
+
   static updateIndex() {
     books.forEach((book, index) => {
       book.id = index;
     });
   }
-  
+
   static removeFunction(button) {
     const num = parseInt(button.id, 10);
     books = books.filter((book) => book.id !== num);
     NewBook.updateIndex();
     NewBook.renderBooks();
   }
-  
 }
 
 add.addEventListener('click', NewBook.addFunction);
