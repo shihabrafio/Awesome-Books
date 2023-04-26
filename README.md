@@ -4,7 +4,9 @@
 
 <div align="center">
   <h3><b>Awesome Books</b></h3>
+  <img src='./display.png'>  <!-- rafio, you can update this image after you make it better looking> -->
 </div>
+
 # :green_book: Table of Contents
 
 - [:book: About the Project](#about-project)
