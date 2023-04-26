@@ -91,7 +91,7 @@ a:hover {
 }
 
 #books {
-  width: 33%;
+  width: 40%;
   margin: auto;
   border: 3px solid #0c0c0c;
 }
@@ -107,6 +107,7 @@ form {
   box-shadow: 3px 4px #888;
   width: 10vw;
   min-width: 63px;
+  margin-left: 77%;
 }
 
 .title,
@@ -132,12 +133,11 @@ form {
   color: #250902;
 }
 
-.remove {
+.close {
   padding: 1px 8px;
-  background-color: #d51515;
+  background-color: white;
   box-shadow: 1px 2px;
-  border-radius: 10px;
-  color: #fff;
+  border-radius: 4px;
 }
 
 footer {
@@ -172,18 +172,22 @@ footer {
 }
 
 span {
-  border-bottom: 1px solid green;
-  color: red;
+  border-bottom: 1px solid;
 }
 
 #list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin: 1rem;
 }
 
-.one-book-list {
+.one-book-list:nth-of-type(even) {
   display: flex;
   justify-content: space-between;
+  background: white;
+}
+
+.one-book-list:nth-of-type(odd) {
+  display: flex;
+  justify-content: space-between;
+  background: gainsboro;
 }
