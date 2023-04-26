@@ -71,12 +71,11 @@ class NewBook {
     list.innerHTML = '';
     books.forEach((book, index) => {
       list.innerHTML += ` 
-    <div id="boi${index}" data-index=${index}>
-    <p> ${book.title} <br /> ${book.author} </p>
+    <div id="boi${index}" class='one-book-list'>
+    <p> "${book.title}" by <i>  ${book.author} </i> </p>
     <p>
       <button class="close" id=${index} onclick='NewBook.removeFunction(this)'>Remove</button>
     </p>
-    <hr />
     </div>
    `;
     });
