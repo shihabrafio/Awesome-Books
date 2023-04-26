@@ -25,14 +25,13 @@ let books = JSON.parse(localStorage.getItem('new-list')) || [
 ];
 
 class NewBook {
-  constructor(title, author){
+  constructor(title, author) {
     this.title = title;
     this.author = author;
     this.id = books.length;
   }
 
-
- static renderBooks() {
+  static renderBooks() {
     localStorage.setItem('new-list', JSON.stringify(books));
     list.innerHTML = '';
     books.forEach((book, index) => {
@@ -46,7 +45,7 @@ class NewBook {
    `;
     });
   }
-  
+
   static addFunction(e) {
     e.preventDefault();
     const title = document.querySelector('.title').value.trim();
@@ -62,20 +61,19 @@ class NewBook {
     document.querySelector('.title').focus();
     NewBook.renderBooks();
   }
-  
+
   static updateIndex() {
     books.forEach((book, index) => {
       book.id = index;
     });
   }
-  
+
   static removeFunction(button) {
     const num = parseInt(button.id, 10);
     books = books.filter((book) => book.id !== num);
     this.updateIndex();
     this.renderBooks();
   }
-  
 }
 
 add.addEventListener('click', NewBook.addFunction);

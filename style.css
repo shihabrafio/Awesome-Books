@@ -20,7 +20,8 @@ hr {
   border-top: 3px solid black;
 }
 
-.title,.author {
+.title,
+.author {
   text-align: left;
   width: 28%;
   background: white;
