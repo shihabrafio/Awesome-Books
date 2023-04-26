@@ -67,7 +67,6 @@ class NewBook {
 
 
  static renderBooks() {
-    const books = document.getElementById('books');
     localStorage.setItem('new-list', JSON.stringify(books));
     list.innerHTML = '';
     books.forEach((book, index) => {
@@ -94,7 +93,6 @@ class NewBook {
     books = books.concat(newbook)
     document.querySelector('form').reset();
     document.querySelector('.title').focus();
-    console.log('add - newbook -', newbook, 'list', books)
     NewBook.renderBooks();
   }
   
