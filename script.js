@@ -94,7 +94,7 @@ class NewBook {
     books = books.concat(newbook)
     document.querySelector('form').reset();
     document.querySelector('.title').focus();
-    this.renderBooks();
+    NewBook.renderBooks();
   }
   
   static updateIndex() {
@@ -106,8 +106,8 @@ class NewBook {
   static removeFunction(button) {
     const num = parseInt(button.id, 10);
     books = books.filter((book) => book.id !== num);
-    this.updateIndex();
-    this.renderBooks();
+    NewBook.updateIndex();
+    NewBook.renderBooks();
   }
   
 }
