@@ -4,18 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Awesome Book</title>
   </head>
   <body>
     <section class="books">
       <header>
-        <h1>Awesome Books</h1>
+        <nav>
+          <a id="logo" href="index.html">Awesome Books</a>
+          <ul class="navul">
+              <li><a id="book-list" class="navitem" href="#">List</a></li>
+              <li><a id="go" class="navitem" href="#">Add New</a></li>
+              <li><a id="then" class="navitem" href="#">Contact</a></li>
+          </ul>
+      </nav>
       </header>
       <div id="list">
       <!-- dinamically add book title, author and remove button here -->
       </div>
-      <div>
+      <div id="read" class="start" >
+        <h1>All Awesome Books</h1>
+        <div id="books">
+        </div>  
+      </div>
+      <div id="add-new" class="add">
         <form>
+          <h1>Add a new book</h1>
           <input type="text" placeholder="Title" class="title" /><br /><br />
           <input type="text" placeholder="Author" class="author" /><br /><br />
           <br />
@@ -23,6 +37,76 @@
         </form>
       </div>
     </section>
+    <section id="contact">
+      <h1>Contact information</h1>
+          <div class="contact-info">
+              <p>
+                  Do you have any question or you want to say 'hello'? <br>
+                  You can reach out to us.
+              </p>
+              <ul>
+                  <li>Our Email: <span>aimshihabuddinkhan@gmail.com</span> and <span>yoriyordina7@gmail.com</span></li>
+                  <li>Our Phone : +8801822496430 & +</li>
+                  <li>Our address: Dhaka,Bangladesh & Ethiopia	</li>
+              </ul>
+          </div>
+    </section>
+    <footer>
+      <div class="copy-right">
+          Copyright
+      </div>
+    </footer>
     <script src="script.js"> </script>
   </body>
 </html>
+   
+
+<!-- <body>
+  <main>
+      <header>
+          <nav>
+              <a id="logo" href="./index.html">Awesome Books</a>
+              <ul class="navul">
+                  <li><a id="now" class="navitem" href="#">List</a></li>
+                  <li><a id="go" class="navitem" href="#">Add New</a></li>
+                  <li><a id="then" class="navitem" href="#">Contact</a></li>
+              </ul>
+          </nav>
+      </header>
+      <div id="time-date"></div>
+      <section id="read" class="start" >
+          <h1>All awesome books</h1>
+          <div id="books">
+          </div>
+      </section>
+      <section id="add-new" class="add">
+          <h1>Add a new book</h1>
+          <form>
+              <input type="text" class="field" placeholder="Title">
+              <input type="text" class="field" placeholder="Author">
+              <button type="button" id="btn">Add</button>
+          </form>
+      </section>
+      <section id="contact">
+          <h1>Contact information</h1>
+          <div class="contact-info">
+              <p>
+                  Do you have any question or you want to say 'hello'? <br>
+                  You can reach out to us.
+              </p>
+              <ul>
+                  <li>Our Email: <span>gakiiberyl@gmailcom</span> and <span>unorjikingsley@gmail.com </span></li>
+                  <li>Our Phone : +2348139050845 and + 2348180651659</li>
+                  <li>Our address:  Lagos, Nigeria	</li>
+              </ul>
+          </div>
+      </section>
+      <footer>
+          <div class="copy-right">
+              Copyright
+          </div>
+      </footer>
+  </main>
+  <script src="script.js"></script>
+  </body>
+  </html> -->
