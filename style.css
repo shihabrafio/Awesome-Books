@@ -1,5 +1,5 @@
 * {
-  margin: 0;
+  margin: 1px;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
@@ -50,6 +50,14 @@ p {
   border-right: 3px solid grey;
   padding: 0 10px;
   text-align: center;
+}
+
+#read {
+  margin-top: 10%;
+}
+
+#add-new {
+  margin-top: 10%;
 }
 
 .navul li:last-child {
@@ -150,7 +158,7 @@ footer {
   width: 90%;
   border: 3px solid grey;
   padding: 10px;
-  margin: 24% 5%;
+  margin: 10% 5%;
   font-size: 19px;
   font-weight: 600;
   color: #250902;
@@ -190,4 +198,8 @@ span {
   display: flex;
   justify-content: space-between;
   background: gainsboro;
+}
+
+#contact {
+  margin-top: 11%;
 }
