@@ -8,30 +8,24 @@ const navitem = document.querySelectorAll('.navitem');
 
 // date
 
-const time_date = new Date();
-let date = time_date.toDateString();
-let time = time_date.toLocaleTimeString('en-US', { hour: 'numeric', minute:'numeric', hour12: true });
+const timedate = new Date();
+let date = timedate.toDateString();
+const time = timedate.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
 
-var x = ''
-date.split(' ').forEach((str,i)=>{
-  if(i === 0 || i === 2) {
-    x += str + ', '
-    console.log(i, x)    
+let x = '';
+date.split(' ').forEach((str, i) => {
+  if (i === 0 || i === 2) {
+    x += `${str}, `;
+  } else {
+    x += `${str} `;
   }
-  else{  
-    x += str +" "
-    console.log(i,x)
-  }
-})
+});
 date = x;
-console.log('final output for date ' , date)
-
 document.querySelector('.date').innerHTML = `
 <div> ${date} </div> 
 <div class='bar'> </div> 
 <div> ${time} </div>
 `;
-
 
 addNew.classList.add('active');
 contact.classList.add('active');
