@@ -31,10 +31,6 @@ nav {
   border: 3px solid grey;
 }
 
-header {
-  width: 100%;
-}
-
 p {
   color: black;
 }
@@ -202,4 +198,22 @@ span {
 
 #contact {
   margin-top: 11%;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+  width: fit-content;
+  height: 3.5rem;
+  box-shadow: 1rem 1rem 10px rgba(148, 248, 91, 0.548);
+  gap: 1rem;
+  margin: 1rem 7% 1rem auto;
+  padding: 2rem;
+}
+
+.bar {
+  height: 2.2rem;
+  border-right: 0.3rem solid rgb(96, 219, 25);
+  position: relative;
+  top: -1rem;
 }
