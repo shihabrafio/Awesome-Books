@@ -6,6 +6,27 @@ const go = document.getElementById('go');
 const then = document.getElementById('then');
 const navitem = document.querySelectorAll('.navitem');
 
+// date
+
+const timedate = new Date();
+let date = timedate.toDateString();
+const time = timedate.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+
+let x = '';
+date.split(' ').forEach((str, i) => {
+  if (i === 0 || i === 2) {
+    x += `${str}, `;
+  } else {
+    x += `${str} `;
+  }
+});
+date = x;
+document.querySelector('.date').innerHTML = `
+<div> ${date} </div> 
+<div class='bar'> </div> 
+<div> ${time} </div>
+`;
+
 addNew.classList.add('active');
 contact.classList.add('active');
 booklist.classList.add('active');
