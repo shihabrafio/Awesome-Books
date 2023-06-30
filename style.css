@@ -65,15 +65,15 @@ a:hover {
 }
 
 #book-list.active {
-  color: black;
+  color: teal;
 }
 
 #go.active {
-  color: black;
+  color: teal;
 }
 
 #then.active {
-  color: black;
+  color: teal;
 }
 
 #read.active {
@@ -112,11 +112,6 @@ form {
   width: 10vw;
   min-width: 63px;
   margin-left: 77%;
-}
-
-.title,
-.author {
-  height: 40px;
 }
 
 .book {

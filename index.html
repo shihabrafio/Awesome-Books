@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Awesome Book</title>
   </head>
   <body>
     <section class="books">
       <header>
-        <nav>
-          <a id="logo" href="index.html">Awesome Books</a>
+        <nav class="hover:bg-stone-950 hover:text-teal-300 hover:border-teal-300">
+          <a id="logo" href="index.html" >Awesome Books</a>
           <ul class="navul">
               <li><a id="book-list" class="navitem" href="#">List</a></li>
               <li><a id="go" class="navitem" href="#">Add New</a></li>
@@ -31,8 +32,8 @@
       <div id="add-new" class="add">
         <form>
           <h1>Add a new book</h1>
-          <input type="text" placeholder="Title" class="title" /><br /><br />
-          <input type="text" placeholder="Author" class="author" /><br /><br />
+          <input type="text" placeholder="Title" class="h-10 border-4 border-teal-400 rounded-lg focus:bg-black focus:text-white" /><br /><br />
+          <input type="text" placeholder="Author" class="h-10 border-4 border-teal-400 rounded-lg focus:bg-black focus:text-white" /><br /><br />
           <br />
           <button type="submit" class="button">Add</button>
         </form>
